@@ -32,7 +32,6 @@ public class SynchronousCommitHandler<E, X, P extends GeneratedMessageV3> {
     protected boolean sendCorrection = false;
     @Autowired
     KafkaTemplate<X, byte[]> kafkaTemplate;
-    private boolean canExecute = false;
     private Supplier<E> persistenceSupplier;
     private X key;
     private Function<E, P> mapper;
